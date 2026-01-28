@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>谭汉琪 - Node.js 全栈工程师</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 50px;
+    }
+    @media print {
+      .container {
+        padding: 20px 30px;
+      }
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #2563eb;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #2563eb;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .contact {
+      font-size: 13px;
+      color: #64748b;
+    }
+    .contact a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1e293b;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 16px;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 4px;
+    }
+    .meta {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 600px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .skill-category h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+    .skill-category ul {
+      list-style: none;
+      font-size: 13px;
+      color: #64748b;
+    }
+    .skill-category li {
+      margin-bottom: 4px;
+      padding-left: 12px;
+      position: relative;
+    }
+    .skill-category li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+    }
+    .project {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+    .project:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .tech-stack {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .tech-stack strong {
+      color: #475569;
+    }
+    .project-desc ul {
+      list-style: none;
+      font-size: 13px;
+    }
+    .project-desc li {
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .project-desc li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+      font-size: 12px;
+    }
+    .work-item {
+      margin-bottom: 12px;
+    }
+    .work-item ul {
+      list-style: none;
+      font-size: 13px;
+      color: #475569;
+    }
+    .work-item li {
+      margin-bottom: 4px;
+      padding-left: 16px;
+      position: relative;
+    }
+    .work-item li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+    }
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .advantages-list {
+      font-size: 13px;
+      color: #475569;
+      padding-left: 24px;
+      line-height: 1.8;
+    }
+    .advantages-list li {
+      margin-bottom: 6px;
+    }
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>谭汉琪</h1>
+      <div class="subtitle">Node.js 全栈工程师</div>
+      <div class="contact">
+        📱 14736351681 &nbsp;|&nbsp; ✉️ 3442322864@qq.com &nbsp;|&nbsp;
+        🔗 <a href="https://github.com/Tarquin-i" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>个人优势</h2>
+      <ol class="advantages-list">
+        <li>掌握 HTML、CSS、JavaScript 和 TypeScript，熟练运用于项目中构建前端页面及响应式适配。</li>
+        <li>熟练使用 Tailwind CSS 进行样式开发，能够高效还原设计稿。</li>
+        <li>掌握 React 18/19、Vue 3 和 Next.js 15 框架，熟悉 uni-app 跨端开发，能够根据项目需求灵活选择技术方案。</li>
+        <li>熟悉 TanStack Router/Query、React Hook Form 等 React 生态工具。</li>
+        <li>熟练使用 Radix UI 和 shadcn/ui 组件库，能够快速构建可视化界面。</li>
+        <li>熟悉 Hono.js 后端框架，能够独立开发 RESTful API 接口。</li>
+        <li>对 PostgreSQL 有实际使用经验，熟悉 Drizzle ORM，能够进行表结构设计和基本的 SQL 优化。</li>
+        <li>熟悉 Monorepo 开发模式，使用 pnpm workspaces + Turbo 管理多包项目。</li>
+        <li>熟悉 Vite 构建工具，掌握 Prettier、ESLint、Biome 等代码质量工具。</li>
+        <li>了解 Tauri 2.x 跨平台应用的项目搭建与打包配置。</li>
+        <li>了解 Docker 容器化部署和阿里云 FC3 Serverless 服务。</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>工作经历</h2>
+      <div class="work-item">
+        <div class="project-header">
+          <h3>西数服（西安）科技有限公司 - 前端实习生</h3>
+          <span class="meta">2025.02 - 2025.05</span>
+        </div>
+        <ul>
+          <li>根据原型图和接口文档，独立完成后台管理系统部分功能模块的开发</li>
+          <li>负责对接客户需求，进行前端页面的调整与优化</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>项目经验</h2>
+
+      <div class="project">
+        <div class="project-header">
+          <h3>EzLottery - 彩票兑奖及库存管理系统</h3>
+          <span class="meta">个人项目 | ~51,000 行代码</span>
+        </div>
+        <div class="tech-stack">
+          <strong>技术栈：</strong>Next.js 15, React 19, Hono.js, Bun, PostgreSQL (ltree), Drizzle ORM, TanStack Query, shadcn/ui, Recharts, Tauri
+        </div>
+        <div class="tech-stack">
+          <strong>负责模块：</strong>钱包模块、版本管理模块、成员树状显示模块
+        </div>
+        <div class="project-desc">
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎钱包模块（余额管理、充值/提现申请、信用额度）</p>
+          <ul>
+            <li>使用 React 19 + TanStack Query 构建钱包主页，展示三种余额状态</li>
+            <li>使用 Recharts 实现余额可视化（堆叠条形图、径向条形图）</li>
+            <li>后端使用事务处理审批流程，SQL 表达式更新余额避免并发问题</li>
+            <li>数据库使用 numeric(15,2) 精确存储金额，枚举管理状态流转</li>
+          </ul>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎版本管理模块（多平台版本发布、强制更新）</p>
+          <ul>
+            <li>实现版本检测逻辑：启动时自动检查更新，语义化版本号比较</li>
+            <li>封装更新弹窗：显示版本信息、下载进度，Tauri 实现跨平台安装</li>
+            <li>数据库使用联合唯一约束（version + platform）防止重复版本</li>
+          </ul>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎成员树状显示模块（层级成员管理）</p>
+          <ul>
+            <li>使用 useMemo 将扁平数据构建为树形结构，实现展开/收起功能</li>
+            <li>使用 CSS paddingLeft 实现视觉缩进，支持搜索和层级筛选</li>
+            <li>后端使用 PostgreSQL ltree 扩展存储层级路径，&lt;@ 操作符查询子孙节点</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
+          <ul>
+            <li>金额精度：使用 numeric(15,2) 而非浮点数，前端格式化为两位小数</li>
+            <li>并发安全：数据库事务 + SQL 表达式更新，避免余额超扣</li>
+            <li>树形构建：useMemo 缓存计算结果，动态判断根节点</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3>Huivo Admin - 客户与玩法管理后台</h3>
+          <span class="meta">个人项目 | ~34,000 行代码</span>
+        </div>
+        <div class="tech-stack">
+          <strong>技术栈：</strong>React 19, Vite 7, TanStack Router, Hono.js, Bun, PostgreSQL, Drizzle ORM, React Hook Form, pinyin-pro
+        </div>
+        <div class="tech-stack">
+          <strong>负责模块：</strong>客户管理、玩法配置、产品管理（与 EzLottery 双数据库联动）
+        </div>
+        <div class="project-desc">
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">前端：</p>
+          <ul>
+            <li>使用 React Hook Form + Zod 构建客户表单，支持多店铺、多来源选择</li>
+            <li>构建玩法配置页面：支持奖品等级动态增删改，实时计算奖品总数和总金额</li>
+            <li>开发产品管理模块：产品列表按客户隔离，支持关联玩法模板</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">后端：</p>
+          <ul>
+            <li>开发客户 CRUD 接口：创建时同步到 EzLottery（创建 user/organization/member/account）</li>
+            <li>实现玩法模板机制：产品关联玩法时自动复制奖品配置</li>
+            <li>设计双数据库连接：huivo 主库 + ezlottery 参考库，通过 customerOrgId 关联</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
+          <ul>
+            <li>拼音搜索：使用 pinyin-pro 将客户名称转换为拼音 slug</li>
+            <li>跨系统同步：创建客户时在 ezlottery 库创建 4 张表记录，使用事务确保原子性</li>
+            <li>双数据库查询：Promise.all 并行查询两个库，内存中组装数据</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3>Security Printing Website - 安全印刷企业官网</h3>
+          <span class="meta">个人项目 | ~12,000 行代码</span>
+        </div>
+        <div class="tech-stack">
+          <strong>技术栈：</strong>React 18, Vite, TanStack Router, Framer Motion, GSAP, Tailwind CSS
+        </div>
+        <div class="tech-stack">
+          <strong>负责模块：</strong>新闻模块、科技与设计模块（前端页面）
+        </div>
+        <div class="project-desc">
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">前端：</p>
+          <ul>
+            <li>使用 React 18 + TanStack Router 构建新闻列表页和详情页，实现路由懒加载</li>
+            <li>实现响应式布局，使用 Tailwind CSS 断点系统适配 PC/平板/手机</li>
+            <li>使用 GSAP ScrollTrigger 实现滚动触发动画（图片视差、文字渐入）</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
+          <ul>
+            <li>滚动动画性能：使用 GSAP scrub 模式 + will-change 属性优化</li>
+            <li>首屏加载优化：路由懒加载 + 图片懒加载 + 动画库按需引入</li>
+            <li>移动端适配：媒体查询检测设备，移动端简化复杂动画</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>教育背景</h2>
+      <div class="edu-item">
+        <div>
+          <h3>西安信息职业大学</h3>
+          <span class="meta">计算机应用工程</span>
+        </div>
+        <span class="meta">2022.09 - 2025.07</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
