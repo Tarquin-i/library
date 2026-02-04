@@ -206,12 +206,13 @@
       <ol class="advantages-list">
         <li>掌握 HTML、CSS、JavaScript 和 TypeScript，熟练运用于项目中构建前端页面及响应式适配。</li>
         <li>熟练使用 Tailwind CSS 进行样式开发，能够高效还原设计稿。</li>
-        <li>掌握 React 18/19、Vue 3 和 Next.js 15 框架，熟悉 uni-app 跨端开发，能够根据项目需求灵活选择技术方案。</li>
+        <li>掌握 React 18/19、Vue 3 和 Next.js 15 框架，熟悉 Pinia 状态管理、vue-i18n 国际化、uni-app 跨端开发。</li>
         <li>熟悉 TanStack Router/Query、React Hook Form 等 React 生态工具。</li>
-        <li>熟练使用 Radix UI 和 shadcn/ui 组件库，能够快速构建可视化界面。</li>
-        <li>熟悉 Hono.js 后端框架，能够独立开发 RESTful API 接口。</li>
-        <li>对 PostgreSQL 有实际使用经验，熟悉 Drizzle ORM，能够进行表结构设计和基本的 SQL 优化。</li>
-        <li>熟悉 Monorepo 开发模式，使用 pnpm workspaces + Turbo 管理多包项目。</li>
+        <li>熟练使用 Radix UI、shadcn/ui 和 Element Plus 组件库，能够快速构建可视化界面。</li>
+        <li>熟悉 Hono.js 后端框架，使用 Zod-OpenAPI 实现类型安全路由，设计分层认证架构（JWT/API Key）。</li>
+        <li>熟悉 PostgreSQL 和 Drizzle ORM，有 ltree 层级查询、事务处理、部分唯一索引等实践经验。</li>
+        <li>熟悉 ECharts 数据可视化，能够实现业务数据图表展示。</li>
+        <li>熟悉 Monorepo 开发模式，使用 Bun Workspaces + Turbo 管理多包项目，实现代码复用和构建优化。</li>
         <li>熟悉 Vite 构建工具，掌握 Prettier、ESLint、Biome 等代码质量工具。</li>
         <li>了解 Tauri 2.x 跨平台应用的项目搭建与打包配置。</li>
         <li>了解 Docker 容器化部署和阿里云 FC3 Serverless 服务。</li>
@@ -222,12 +223,26 @@
       <h2>工作经历</h2>
       <div class="work-item">
         <div class="project-header">
+          <h3>东莞市将为防伪科技有限公司 - 全栈工程师</h3>
+          <span class="meta">2025.07 - 至今</span>
+        </div>
+        <ul>
+          <li>负责公司防伪验证系统的全栈开发与维护，覆盖内部业务系统、客户端产品及后端基础设施</li>
+          <li>独立开发 VeriHub 多租户防伪验证平台，采用状态机 + Strategy 模式，单一代码库支持 6+ 客户端隔离</li>
+          <li>自研一键部署脚本，自动化处理 OSS 上传、路径替换、阿里云函数计算部署</li>
+          <li>持续迭代现有系统：修复 Bug、响应客户需求开发新功能、优化系统性能、提供技术支持</li>
+        </ul>
+      </div>
+      <div class="work-item">
+        <div class="project-header">
           <h3>西数服（西安）科技有限公司 - 前端实习生</h3>
           <span class="meta">2025.02 - 2025.05</span>
         </div>
         <ul>
-          <li>根据原型图和接口文档，独立完成后台管理系统部分功能模块的开发</li>
-          <li>负责对接客户需求，进行前端页面的调整与优化</li>
+          <li>基于 vue3-element-admin 框架，负责 AWS Transparency 透明计划打印系统的业务模块开发</li>
+          <li>开发透明计划管理模块（~2050 行）：实现批次创建/审核/废弃流程，复杂表单处理（产品+标签+地址多级嵌套）</li>
+          <li>开发授权账号管理和产品管理模块，实现 Excel 批量导入、亚马逊产品同步功能</li>
+          <li>实现 Vue I18n 中英文国际化，新增 4 个业务模块的完整双语翻译文件</li>
         </ul>
       </div>
     </section>
@@ -245,6 +260,9 @@
         </div>
         <div class="tech-stack">
           <strong>负责模块：</strong>钱包模块、版本管理模块、成员树状显示模块
+        </div>
+        <div class="tech-stack" style="margin-top: 8px;">
+          <strong>项目简介：</strong>为即开型彩票（刮刮乐）设计的 B2B 分销管理平台，覆盖从批次导入、包装激活、库存转移到扫码兑奖的完整链路，支持多租户隔离和跨平台客户端。
         </div>
         <div class="project-desc">
           <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎钱包模块（余额管理、充值/提现申请、信用额度）</p>
@@ -286,24 +304,31 @@
         <div class="tech-stack">
           <strong>负责模块：</strong>客户管理、玩法配置、产品管理（与 EzLottery 双数据库联动）
         </div>
+        <div class="tech-stack" style="margin-top: 8px;">
+          <strong>项目简介：</strong>为彩票印刷企业开发的 B2B 客户管理与产品配置后台，与 EzLottery 双数据库联动，实现客户创建时自动同步账户、玩法模板复用、产品关联配置。
+        </div>
         <div class="project-desc">
-          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">前端：</p>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎客户管理模块（客户 CRUD、跨系统同步）</p>
           <ul>
             <li>使用 React Hook Form + Zod 构建客户表单，支持多店铺、多来源选择</li>
-            <li>构建玩法配置页面：支持奖品等级动态增删改，实时计算奖品总数和总金额</li>
-            <li>开发产品管理模块：产品列表按客户隔离，支持关联玩法模板</li>
+            <li>创建客户时同步到 EzLottery（创建 user/organization/member/account 4 张表）</li>
+            <li>使用 pinyin-pro 将客户名称转换为拼音 slug，支持拼音搜索</li>
           </ul>
-          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">后端：</p>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎玩法配置模块（奖品等级配置、模板机制）</p>
           <ul>
-            <li>开发客户 CRUD 接口：创建时同步到 EzLottery（创建 user/organization/member/account）</li>
+            <li>构建玩法配置页面：支持奖品等级动态增删改，实时计算奖品总数和总金额</li>
             <li>实现玩法模板机制：产品关联玩法时自动复制奖品配置</li>
+          </ul>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎产品管理模块（产品 CRUD、玩法关联）</p>
+          <ul>
+            <li>开发产品管理模块：产品列表按客户隔离，支持关联玩法模板</li>
             <li>设计双数据库连接：huivo 主库 + ezlottery 参考库，通过 customerOrgId 关联</li>
           </ul>
           <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
           <ul>
-            <li>拼音搜索：使用 pinyin-pro 将客户名称转换为拼音 slug</li>
             <li>跨系统同步：创建客户时在 ezlottery 库创建 4 张表记录，使用事务确保原子性</li>
             <li>双数据库查询：Promise.all 并行查询两个库，内存中组装数据</li>
+            <li>拼音搜索：使用 pinyin-pro 将客户名称转换为拼音 slug</li>
           </ul>
         </div>
       </div>
@@ -311,26 +336,172 @@
       <div class="project">
         <div class="project-header">
           <h3>Security Printing Website - 安全印刷企业官网</h3>
-          <span class="meta">个人项目 | ~12,000 行代码</span>
+          <span class="meta">个人项目 | ~46,000 行代码</span>
         </div>
         <div class="tech-stack">
-          <strong>技术栈：</strong>React 18, Vite, TanStack Router, Framer Motion, GSAP, Tailwind CSS
+          <strong>技术栈：</strong>React 18, Vite, TanStack Router, Three.js, GSAP, Tailwind CSS
         </div>
         <div class="tech-stack">
-          <strong>负责模块：</strong>新闻模块、科技与设计模块（前端页面）
+          <strong>负责模块：</strong>新闻模块、科技与设计模块
+        </div>
+        <div class="tech-stack" style="margin-top: 8px;">
+          <strong>项目简介：</strong>安全印刷企业官网，展示公司防伪印刷解决方案（税票、证书等）、技术服务（凹版印刷、数字防伪）、产品中心和新闻动态，配套后台管理系统支持内容维护。
         </div>
         <div class="project-desc">
-          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">前端：</p>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎新闻模块（列表、详情、分类筛选）</p>
           <ul>
             <li>使用 React 18 + TanStack Router 构建新闻列表页和详情页，实现路由懒加载</li>
-            <li>实现响应式布局，使用 Tailwind CSS 断点系统适配 PC/平板/手机</li>
-            <li>使用 GSAP ScrollTrigger 实现滚动触发动画（图片视差、文字渐入）</li>
+            <li>实现分类筛选和分页功能，响应式适配桌面端 12 条/页、移动端 10 条/页</li>
+            <li>使用 react-i18next 实现中英文国际化，支持语言切换</li>
+          </ul>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎科技与设计模块（防伪技术、数字税票、防伪设计）</p>
+          <ul>
+            <li>构建三大板块页面：防伪技术、数字税票管理系统、防伪设计</li>
+            <li>使用数据驱动方式配置页面内容，组件高度复用</li>
           </ul>
           <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
           <ul>
             <li>滚动动画性能：使用 GSAP scrub 模式 + will-change 属性优化</li>
             <li>首屏加载优化：路由懒加载 + 图片懒加载 + 动画库按需引入</li>
             <li>移动端适配：媒体查询检测设备，移动端简化复杂动画</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3>VeriHub - 多租户防伪验证平台</h3>
+          <span class="meta">个人项目 | ~5,600 行代码</span>
+        </div>
+        <div class="tech-stack">
+          <strong>技术栈：</strong>ES6 Modules, Tailwind CSS 3.4, GSAP, 阿里云函数计算 (FC), 阿里云 OSS
+        </div>
+        <div class="tech-stack">
+          <strong>负责模块：</strong>全部（独立开发）
+        </div>
+        <div class="project-desc">
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">前端：</p>
+          <ul>
+            <li>使用原生 ES6 Modules 构建 SPA，零打包工具，浏览器原生模块动态导入</li>
+            <li>设计无头状态机（Verifier Machine），统一管理验证流程（IDLE → VALIDATING → SUCCESS/FAIL）</li>
+            <li>采用 Strategy 模式实现多种验证策略（明码/暗码/部分暗码），工厂动态选择</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">后端/部署：</p>
+          <ul>
+            <li>阿里云函数计算处理验证请求，OSS 托管静态资源</li>
+            <li>自研部署脚本实现一键部署：OSS 上传、路径替换、FC 部署、配置恢复</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
+          <ul>
+            <li>多租户隔离：通过 URL 参数动态导入客户端配置和布局组件</li>
+            <li>状态机设计：支持请求防抖、缓存、取消，通过事件驱动 UI 更新</li>
+            <li>部署自动化：处理资源路径替换、环境变量注入等复杂流程</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3>AWS Transparency - 透明计划打印系统</h3>
+          <span class="meta">实习项目 | 业务模块 ~4,300 行代码</span>
+        </div>
+        <div class="tech-stack">
+          <strong>技术栈：</strong>Vue 3.5, TypeScript, Element Plus, Pinia, Vue I18n, UnoCSS, Vite 6
+        </div>
+        <div class="tech-stack">
+          <strong>框架基础：</strong>vue3-element-admin（系统管理、权限控制、布局组件等由框架提供）
+        </div>
+        <div class="tech-stack">
+          <strong>负责模块：</strong>透明计划管理、授权账号管理、产品管理、仪表盘重写
+        </div>
+        <div class="project-desc">
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎透明计划管理模块（~2050 行）</p>
+          <ul>
+            <li>实现批次创建/审核/废弃完整业务流程，支持批量审核操作</li>
+            <li>开发复杂嵌套表单：产品选择、标签配置、地址信息多级数据处理</li>
+            <li>实现 ZIP 文件批量导出功能，包含多个标签文件</li>
+          </ul>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎授权账号与产品管理模块（~1920 行）</p>
+          <ul>
+            <li>开发亚马逊 API 授权凭证管理功能</li>
+            <li>实现产品 CRUD、Excel 批量导入、亚马逊产品同步</li>
+          </ul>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎国际化与仪表盘（~470 行）</p>
+          <ul>
+            <li>新增 4 个业务模块的 Vue I18n 中英文翻译文件</li>
+            <li>重写仪表盘页面，将原框架的数据统计改为通知公告列表</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
+          <ul>
+            <li>复杂表单处理：透明计划表单包含产品、标签、地址等多级嵌套数据</li>
+            <li>状态流转管理：批次从创建到审核到废弃的完整生命周期</li>
+            <li>国际化：动态状态标签翻译、表单验证提示等完整双语支持</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3>JWEval App - 信码产品激活系统</h3>
+          <span class="meta">个人项目 | ~940 行代码</span>
+        </div>
+        <div class="tech-stack">
+          <strong>技术栈：</strong>uni-app (Vue 2), Express.js, PostgreSQL, HBuilderX
+        </div>
+        <div class="tech-stack">
+          <strong>负责模块：</strong>全部（全栈开发）
+        </div>
+        <div class="project-desc">
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">前端：</p>
+          <ul>
+            <li>使用 uni-app 开发跨平台移动应用，一套代码运行在 Android/iOS/微信小程序</li>
+            <li>集成原生扫码能力，支持 QR Code 和条形码识别</li>
+            <li>实现丰富的 CSS 动画效果（脉冲、涟漪、弹跳）提升用户体验</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">后端：</p>
+          <ul>
+            <li>Node.js + Express.js 构建 RESTful API</li>
+            <li>PostgreSQL 存储激活记录，支持页码/张码两种激活类型</li>
+            <li>智能 URL 解析：自动识别微信二维码格式，提取防伪码参数</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
+          <ul>
+            <li>跨平台适配：处理不同平台的扫码 API 差异</li>
+            <li>批量激活：页码激活时需要批量更新该页所有未激活记录</li>
+            <li>URL 解析：支持多种二维码格式（直接码、微信跳转链接等）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <h3>Data to PDF Print - Excel 转 PDF 标签工具</h3>
+          <span class="meta">个人项目 | ~9,500 行代码</span>
+        </div>
+        <div class="tech-stack">
+          <strong>技术栈：</strong>Python 3.8+, Tkinter, ReportLab, Pandas, openpyxl, Click, PyInstaller
+        </div>
+        <div class="tech-stack">
+          <strong>负责模块：</strong>全部（独立开发）
+        </div>
+        <div class="project-desc">
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">功能：</p>
+          <ul>
+            <li>读取 Excel 数据并生成专业 PDF 标签的桌面工具</li>
+            <li>支持多种标签类型：常规盒标、分盒标、嵌套盒标</li>
+            <li>提供 GUI（Tkinter）和 CLI（Click）两种使用方式</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">架构设计：</p>
+          <ul>
+            <li>委托模式：将不同标签类型的逻辑分离到独立模块</li>
+            <li>模板模式：统一的标签生成流程，子类实现具体布局</li>
+            <li>使用 ReportLab 实现复杂 PDF 布局，内置微软雅黑字体确保中文显示</li>
+          </ul>
+          <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
+          <ul>
+            <li>PDF 布局：使用 ReportLab 实现精确的标签尺寸和位置控制</li>
+            <li>数据提取：统一的 Excel 数据提取器，支持数据缺失时的用户补充</li>
+            <li>跨平台打包：PyInstaller 生成 macOS/Windows 独立可执行文件</li>
           </ul>
         </div>
       </div>
