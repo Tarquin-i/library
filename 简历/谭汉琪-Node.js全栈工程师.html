@@ -403,39 +403,48 @@
       <div class="project">
         <div class="project-header">
           <h3>AWS Transparency - 透明计划打印系统</h3>
-          <span class="meta">实习项目 | 业务模块 ~4,300 行代码</span>
+          <span class="meta">实习项目 | 业务模块 ~4,335 行代码</span>
         </div>
         <div class="tech-stack">
           <strong>技术栈：</strong>Vue 3.5, TypeScript, Element Plus, Pinia, Vue I18n, UnoCSS, Vite 6
         </div>
         <div class="tech-stack">
-          <strong>框架基础：</strong>vue3-element-admin（系统管理、权限控制、布局组件等由框架提供）
-        </div>
-        <div class="tech-stack">
           <strong>负责模块：</strong>透明计划管理、授权账号管理、产品管理、仪表盘重写
         </div>
+        <div class="tech-stack" style="margin-top: 8px;">
+          <strong>项目简介：</strong>亚马逊透明计划标签打印管理系统，用于管理透明计划标签的批次创建、审核、打印和导出，支持亚马逊 API 授权账号管理和产品同步，实现中英文双语国际化。
+        </div>
         <div class="project-desc">
-          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎透明计划管理模块（~2050 行）</p>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎透明计划管理模块（批次创建、审核、导出）</p>
           <ul>
-            <li>实现批次创建/审核/废弃完整业务流程，支持批量审核操作</li>
-            <li>开发复杂嵌套表单：产品选择、标签配置、地址信息多级数据处理</li>
-            <li>实现 ZIP 文件批量导出功能，包含多个标签文件</li>
+            <li>实现订单状态机管理：待创建 → 待审核 → 下载中 → 下载成功/失败 → 已打印/已废弃</li>
+            <li>开发复杂嵌套表单：产品选择弹窗（多维度筛选）、标签配置、地址信息多级数据处理</li>
+            <li>使用 computed + vue-i18n 实现动态状态标签国际化映射</li>
+            <li>实现 ZIP 文件导出：Blob 处理二进制流，从响应头解析文件名</li>
           </ul>
-          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎授权账号与产品管理模块（~1920 行）</p>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎授权账号管理模块（亚马逊 API 凭证管理）</p>
           <ul>
-            <li>开发亚马逊 API 授权凭证管理功能</li>
-            <li>实现产品 CRUD、Excel 批量导入、亚马逊产品同步</li>
+            <li>开发亚马逊 API 授权凭证管理：Client ID、Client Secret、Party ID</li>
+            <li>实现敏感信息脱敏显示（Client Secret 显示为 ***）</li>
+            <li>支持标签类型、识别码（GTIN/FNSKU/ASIN/SKU）、提示语配置</li>
           </ul>
-          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎国际化与仪表盘（~470 行）</p>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎产品管理模块（CRUD、批量导入、同步）</p>
           <ul>
-            <li>新增 4 个业务模块的 Vue I18n 中英文翻译文件</li>
-            <li>重写仪表盘页面，将原框架的数据统计改为通知公告列表</li>
+            <li>实现产品 CRUD、Excel 批量导入（.xlsx/.xlsm）、模板下载</li>
+            <li>开发亚马逊产品同步功能：选择授权账号，使用 Party ID 调用 API（5 分钟超时）</li>
+            <li>标签标记多选处理：字符串与数组互转</li>
+          </ul>
+          <p style="font-size: 13px; color: #1e40af; margin: 10px 0 6px; font-weight: 600;">▎仪表盘重写（通知公告系统）</p>
+          <ul>
+            <li>将原框架的数据统计改为通知公告列表</li>
+            <li>实现通知详情弹窗、富文本内容展示</li>
           </ul>
           <p style="font-size: 13px; color: #475569; margin: 8px 0 4px; font-weight: 600;">重点难点：</p>
           <ul>
-            <li>复杂表单处理：透明计划表单包含产品、标签、地址等多级嵌套数据</li>
-            <li>状态流转管理：批次从创建到审核到废弃的完整生命周期</li>
-            <li>国际化：动态状态标签翻译、表单验证提示等完整双语支持</li>
+            <li>状态流转管理：设计 7 种订单状态的完整生命周期，使用 Tab 切换 + 状态筛选</li>
+            <li>复杂表单处理：嵌套数组数据（fnskuList）、深拷贝提交、动态校验规则</li>
+            <li>国际化实现：vue-i18n v11，动态状态标签映射，表单校验提示双语支持</li>
+            <li>文件处理：Excel 导入（FormData 上传）、ZIP 导出（Blob + 响应头解析）</li>
           </ul>
         </div>
       </div>
